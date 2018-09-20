@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, /media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/SubtratorCompleto/subtrator_completo.sv
+source_file = 1, /media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/SubtratorCompleto/Waveform.vwf
+source_file = 1, /media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/SubtratorCompleto/meio_subtrator.sv
+design_name = subtrator_completo
+instance = comp, \d~output , d~output, subtrator_completo, 1
+instance = comp, \bout~output , bout~output, subtrator_completo, 1
+instance = comp, \a~input , a~input, subtrator_completo, 1
+instance = comp, \bin~input , bin~input, subtrator_completo, 1
+instance = comp, \b~input , b~input, subtrator_completo, 1
+instance = comp, \MS2|d , MS2|d, subtrator_completo, 1
+instance = comp, \bout~0 , bout~0, subtrator_completo, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, subtrator_completo, 1
