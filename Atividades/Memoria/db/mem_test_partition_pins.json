@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "saida1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[0]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[1]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[2]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[3]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[4]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[5]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[6]",
+					"strict" : false
+				},
+				{
+					"name" : "endereco[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

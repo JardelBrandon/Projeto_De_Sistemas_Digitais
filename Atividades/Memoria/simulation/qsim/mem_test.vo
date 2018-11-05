@@ -1,0 +1,744 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+
+// DATE "10/26/2018 15:00:27"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module mem_test (
+	clock,
+	saida,
+	endereco);
+input 	clock;
+output 	[7:0] saida;
+input 	[7:0] endereco;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \clock~input_o ;
+wire \~GND~combout ;
+wire \endereco[0]~input_o ;
+wire \endereco[1]~input_o ;
+wire \endereco[2]~input_o ;
+wire \endereco[3]~input_o ;
+wire \endereco[4]~input_o ;
+wire \endereco[5]~input_o ;
+wire \endereco[6]~input_o ;
+wire \endereco[7]~input_o ;
+wire [7:0] \memoria_inst|altsyncram_component|auto_generated|q_a ;
+
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a1_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a2_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a3_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a4_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a5_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a6_PORTADATAOUT_bus ;
+wire [0:0] \memoria_inst|altsyncram_component|auto_generated|ram_block1a7_PORTADATAOUT_bus ;
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [0] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [1] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a1_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [2] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a2_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [3] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a3_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [4] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a4_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [5] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a5_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [6] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a6_PORTADATAOUT_bus [0];
+
+assign \memoria_inst|altsyncram_component|auto_generated|q_a [7] = \memoria_inst|altsyncram_component|auto_generated|ram_block1a7_PORTADATAOUT_bus [0];
+
+cyclonev_io_obuf \saida[0]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [0]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[0]),
+	.obar());
+// synopsys translate_off
+defparam \saida[0]~output .bus_hold = "false";
+defparam \saida[0]~output .open_drain_output = "false";
+defparam \saida[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[1]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [1]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[1]),
+	.obar());
+// synopsys translate_off
+defparam \saida[1]~output .bus_hold = "false";
+defparam \saida[1]~output .open_drain_output = "false";
+defparam \saida[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[2]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [2]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[2]),
+	.obar());
+// synopsys translate_off
+defparam \saida[2]~output .bus_hold = "false";
+defparam \saida[2]~output .open_drain_output = "false";
+defparam \saida[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[3]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [3]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[3]),
+	.obar());
+// synopsys translate_off
+defparam \saida[3]~output .bus_hold = "false";
+defparam \saida[3]~output .open_drain_output = "false";
+defparam \saida[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[4]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [4]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[4]),
+	.obar());
+// synopsys translate_off
+defparam \saida[4]~output .bus_hold = "false";
+defparam \saida[4]~output .open_drain_output = "false";
+defparam \saida[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[5]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [5]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[5]),
+	.obar());
+// synopsys translate_off
+defparam \saida[5]~output .bus_hold = "false";
+defparam \saida[5]~output .open_drain_output = "false";
+defparam \saida[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[6]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [6]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[6]),
+	.obar());
+// synopsys translate_off
+defparam \saida[6]~output .bus_hold = "false";
+defparam \saida[6]~output .open_drain_output = "false";
+defparam \saida[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \saida[7]~output (
+	.i(\memoria_inst|altsyncram_component|auto_generated|q_a [7]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(saida[7]),
+	.obar());
+// synopsys translate_off
+defparam \saida[7]~output .bus_hold = "false";
+defparam \saida[7]~output .open_drain_output = "false";
+defparam \saida[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \~GND (
+// Equation(s):
+// \~GND~combout  = GND
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~GND~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~GND .extended_lut = "off";
+defparam \~GND .lut_mask = 64'h0000000000000000;
+defparam \~GND .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[0]~input (
+	.i(endereco[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[0]~input_o ));
+// synopsys translate_off
+defparam \endereco[0]~input .bus_hold = "false";
+defparam \endereco[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[1]~input (
+	.i(endereco[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[1]~input_o ));
+// synopsys translate_off
+defparam \endereco[1]~input .bus_hold = "false";
+defparam \endereco[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[2]~input (
+	.i(endereco[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[2]~input_o ));
+// synopsys translate_off
+defparam \endereco[2]~input .bus_hold = "false";
+defparam \endereco[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[3]~input (
+	.i(endereco[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[3]~input_o ));
+// synopsys translate_off
+defparam \endereco[3]~input .bus_hold = "false";
+defparam \endereco[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[4]~input (
+	.i(endereco[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[4]~input_o ));
+// synopsys translate_off
+defparam \endereco[4]~input .bus_hold = "false";
+defparam \endereco[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[5]~input (
+	.i(endereco[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[5]~input_o ));
+// synopsys translate_off
+defparam \endereco[5]~input .bus_hold = "false";
+defparam \endereco[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[6]~input (
+	.i(endereco[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[6]~input_o ));
+// synopsys translate_off
+defparam \endereco[6]~input .bus_hold = "false";
+defparam \endereco[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \endereco[7]~input (
+	.i(endereco[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\endereco[7]~input_o ));
+// synopsys translate_off
+defparam \endereco[7]~input .bus_hold = "false";
+defparam \endereco[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_first_bit_number = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = "000000000000000000000000000000000000000000000000000000505A014784";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a1_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_first_bit_number = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a1 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000005";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a2_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_first_bit_number = 2;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000016";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a3_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_first_bit_number = 3;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a3 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000047";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a4_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_first_bit_number = 4;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000010";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a5_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_first_bit_number = 5;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a5 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000048";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a6_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_first_bit_number = 6;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000000";
+// synopsys translate_on
+
+cyclonev_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 (
+	.portawe(gnd),
+	.portare(vcc),
+	.portaaddrstall(gnd),
+	.portbwe(gnd),
+	.portbre(vcc),
+	.portbaddrstall(gnd),
+	.clk0(\clock~input_o ),
+	.clk1(gnd),
+	.ena0(vcc),
+	.ena1(vcc),
+	.ena2(vcc),
+	.ena3(vcc),
+	.clr0(gnd),
+	.clr1(gnd),
+	.nerror(vcc),
+	.portadatain({\~GND~combout }),
+	.portaaddr({\endereco[7]~input_o ,\endereco[6]~input_o ,\endereco[5]~input_o ,\endereco[4]~input_o ,\endereco[3]~input_o ,\endereco[2]~input_o ,\endereco[1]~input_o ,\endereco[0]~input_o }),
+	.portabyteenamasks(1'b1),
+	.portbdatain(1'b0),
+	.portbaddr(8'b00000000),
+	.portbbyteenamasks(1'b1),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.portadataout(\memoria_inst|altsyncram_component|auto_generated|ram_block1a7_PORTADATAOUT_bus ),
+	.portbdataout(),
+	.eccstatus(),
+	.dftout());
+// synopsys translate_off
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .data_interleave_offset_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .data_interleave_width_in_bits = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .init_file = "mem_test.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .init_file_layout = "port_a";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_utn1:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .operation_mode = "single_port";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_address_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_byte_enable_clock = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_data_out_clear = "none";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_data_out_clock = "clock0";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_first_address = 0;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_first_bit_number = 7;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_last_address = 255;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_logical_ram_depth = 256;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_logical_ram_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_a_read_during_write_mode = "new_data_no_nbe_read";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_b_address_width = 8;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .port_b_data_width = 1;
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .ram_block_type = "M20K";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a7 .mem_init0 = "0000000000000000000000000000000000000000000000000000000000000000";
+// synopsys translate_on
+
+endmodule

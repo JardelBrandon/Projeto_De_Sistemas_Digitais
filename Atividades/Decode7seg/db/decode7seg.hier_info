@@ -1,0 +1,14 @@
+|decode7seg
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

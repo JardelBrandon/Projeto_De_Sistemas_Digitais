@@ -1,0 +1,14 @@
+# do moore.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:19:35 on Oct 12,2018
+# vlog -work work moore.vo 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Implementações/Maquinas_De_Estados/Moore/simulation/qsim/work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing token file "C:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Implementações/Maquinas_De_Estados/Moore/simulation/qsim/work/_temp/vlogcafayf".
+# O sistema não pode encontrar o caminho especificado. (GetLastError() = 3)
+# ** Error: moore.vo(31): Verilog Compiler exiting
+# End time: 21:19:35 on Oct 12,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: c:/intelfpga_lite/18.0/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./moore.do line 3

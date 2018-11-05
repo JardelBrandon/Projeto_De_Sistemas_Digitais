@@ -1,0 +1,11 @@
+module mem_test(clock, saida);
+	output reg[7:0] saida;
+	input clock;
+	memoria	memoria_inst (
+	.address ( address_sig ),
+	.clock ( clock ),
+	.data ( data_sig ),
+	.wren ( wren_sig ),
+	.q ( saida )
+	);
+endmodule 

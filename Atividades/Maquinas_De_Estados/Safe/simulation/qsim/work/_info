@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Implementações/Maquinas_De_Estados/Safe/simulation/qsim
+vsafe
+Z0 !s110 1539462008
+!i10b 1
+!s100 Zd0JLZ5gPQ8WEb@3[MY=J1
+IV[5lQjZ0`]dneWdOIQg3B1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Atividades/Maquinas_De_Estados/Safe/simulation/qsim
+w1539462007
+8safe.vo
+Fsafe.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1539462008.000000
+!s107 safe.vo|
+!s90 -work|work|safe.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vsafe_vlg_vec_tst
+R0
+!i10b 1
+!s100 LNE1;K4=e0bO:2YC]N4Xb1
+IF^;`455zTYDNFARH0kBkD1
+R1
+R2
+w1539462005
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R5
+R6

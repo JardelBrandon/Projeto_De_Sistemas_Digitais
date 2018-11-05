@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/Somador_4_bits_Display_7_Seg/simulation/qsim
+vsomador_decode
+Z0 !s110 1541363880
+!i10b 1
+!s100 Do9RMAobDLZ03jID]oNjZ0
+I?n=:jjj_kCB8dij5Ihj@>3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Atividades/Somador_4_bits_Display_7_Seg/simulation/qsim
+w1541363855
+8somador_decode.vo
+Fsomador_decode.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1541363879.000000
+!s107 somador_decode.vo|
+!s90 -work|work|somador_decode.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vsomador_decode_vlg_vec_tst
+R0
+!i10b 1
+!s100 ;A<m>?RWX82PKULhN@7Q81
+IkX`n^c2Liah?8mF42OJId3
+R1
+R2
+w1541363850
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1541363880.000000
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R4
+R5

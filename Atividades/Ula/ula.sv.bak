@@ -1,0 +1,16 @@
+module ula(clk, rst_n, sel, a, b, s);
+	input [3:0] a, b;
+	input clk, rest_n, sel;
+	output reg[4:0] s;
+	
+	always @(posedge clk)
+	begin
+		if(rst_n)
+			s <= 0;
+		else
+			if (sel)
+				s <= a + b;
+			else
+				s <= a - b;
+	end
+endmodule 

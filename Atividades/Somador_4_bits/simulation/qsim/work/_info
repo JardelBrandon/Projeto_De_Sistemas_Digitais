@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/Somador_4bits/simulation/qsim
+vsomador_4
+Z1 !s110 1537550926
+!i10b 1
+!s100 AZ7<2RFV3`5o>lLc@_dk93
+IJhG]]R`LL8C3L]AAMHVYS1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1537550924
+8somador_4.vo
+Fsomador_4.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1537550925.000000
+!s107 somador_4.vo|
+!s90 -work|work|somador_4.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vsomador_4_vlg_vec_tst
+R1
+!i10b 1
+!s100 CTkikV7;=CL6^5iPNNO>01
+ILTSCTZ4LU=TLOHDLeioig3
+R2
+R0
+w1537550922
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1537550926.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R4
+R5
