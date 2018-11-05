@@ -1,0 +1,141 @@
+$comment
+	File created using the following command:
+		vcd file subtrator_completo.msim.vcd -direction
+$end
+$date
+	Fri Sep 14 15:20:36 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module subtrator_completo_vlg_vec_tst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # bi $end
+$var wire 1 $ bo $end
+$var wire 1 % s $end
+
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , s~output_o $end
+$var wire 1 - bo~output_o $end
+$var wire 1 . a~input_o $end
+$var wire 1 / b~input_o $end
+$var wire 1 0 bi~input_o $end
+$var wire 1 1 s~0_combout $end
+$var wire 1 2 bo~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+1'
+x(
+1)
+1*
+1+
+0,
+0-
+0.
+0/
+00
+01
+02
+$end
+#40000
+1!
+1"
+1.
+1/
+#90000
+0!
+0"
+0.
+0/
+#190000
+1#
+1!
+1"
+10
+1.
+1/
+12
+11
+1,
+1-
+1$
+1%
+#270000
+0#
+0!
+0"
+00
+0.
+0/
+02
+01
+0,
+0-
+0$
+0%
+#380000
+1#
+1!
+10
+1.
+#410000
+0#
+00
+11
+1,
+1%
+#420000
+0!
+0.
+01
+0,
+0%
+#570000
+1"
+1#
+1/
+10
+12
+1-
+1$
+#620000
+0"
+0#
+0/
+00
+02
+0-
+0$
+#660000
+1!
+1.
+11
+1,
+1%
+#690000
+0!
+0.
+01
+0,
+0%
+#1000000

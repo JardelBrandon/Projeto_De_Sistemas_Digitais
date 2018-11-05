@@ -1,0 +1,14 @@
+module subtrator_completo(a, b, bi, s, ci);
+	input a, b, bi;
+	output s, ci;
+	logic w1, w2, w3, w4;
+	
+	assign w1 = a ^ b;
+	assign w2 = ~a & b;
+	assign w3 = ~a & bi;
+	assign w4 = b & bi;
+	
+	assign s = bi ^ w1;
+	assign ci = w2 | w3 | w4;
+
+endmodule

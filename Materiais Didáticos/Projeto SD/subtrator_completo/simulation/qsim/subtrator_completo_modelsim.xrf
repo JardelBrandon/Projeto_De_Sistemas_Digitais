@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, /home/aluno/Downloads/Projeto SD/subtrator_completo/subtrator_completo.sv
+source_file = 1, /home/aluno/Downloads/Projeto SD/subtrator_completo/Waveform.vwf
+source_file = 1, /home/aluno/Downloads/Projeto SD/subtrator_completo/db/subtrator_completo.cbx.xml
+design_name = subtrator_completo
+instance = comp, \s~output , s~output, subtrator_completo, 1
+instance = comp, \bo~output , bo~output, subtrator_completo, 1
+instance = comp, \a~input , a~input, subtrator_completo, 1
+instance = comp, \b~input , b~input, subtrator_completo, 1
+instance = comp, \bi~input , bi~input, subtrator_completo, 1
+instance = comp, \s~0 , s~0, subtrator_completo, 1
+instance = comp, \bo~0 , bo~0, subtrator_completo, 1

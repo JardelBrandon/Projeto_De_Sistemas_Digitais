@@ -1,0 +1,65 @@
+Determining the location of the ModelSim executable...
+
+Using: /home/aluno/intelFPGA_lite/17.1/modelsim_ase/linuxaloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off meio_somador -c meio_somador --vector_source="/home/aluno/Downloads/Projeto SD/meio_somador/Waveform.vwf" --testbench_file="/home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/Waveform.vwf.vt"
+
+Inconsistency detected by ld.so: dl-close.c: 811: _dl_close: Assertion `map->l_init_called' failed!
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Sep 14 13:47:06 2018Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off meio_somador -c meio_somador --vector_source="/home/aluno/Downloads/Projeto SD/meio_somador/Waveform.vwf" --testbench_file="/home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/Waveform.vwf.vt"Info (119006): Selected device 5CGXFC7C7F23C8 for design "meio_somador"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/" meio_somador -c meio_somador
+
+Inconsistency detected by ld.so: dl-close.c: 811: _dl_close: Assertion `map->l_init_called' failed!
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Sep 14 13:47:09 2018Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/" meio_somador -c meio_somadorInfo (119006): Selected device 5CGXFC7C7F23C8 for design "meio_somador"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file meio_somador.vo in folder "/home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1126 megabytes    Info: Processing ended: Fri Sep 14 13:47:10 2018    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+/home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/meio_somador.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+/home/aluno/intelFPGA_lite/17.1/modelsim_ase/linuxaloem//vsim -c -do meio_somador.do
+
+Reading pref.tcl
+# 10.5b
+# do meio_somador.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:47:13 on Sep 14,2018# vlog -work work meio_somador.vo 
+# -- Compiling module meio_somador
+# # Top level modules:# 	meio_somador# End time: 13:47:14 on Sep 14,2018, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016# Start time: 13:47:14 on Sep 14,2018# vlog -work work Waveform.vwf.vt 
+# -- Compiling module meio_somador_vlg_vec_tst# # Top level modules:# 	meio_somador_vlg_vec_tst# End time: 13:47:14 on Sep 14,2018, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.meio_somador_vlg_vec_tst # Start time: 13:47:14 on Sep 14,2018# Loading work.meio_somador_vlg_vec_tst# Loading work.meio_somador
+# after#23
+# ** Note: $finish    : Waveform.vwf.vt(48)#    Time: 1 us  Iteration: 0  Instance: /meio_somador_vlg_vec_tst
+# End time: 13:47:15 on Sep 14,2018, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading /home/aluno/Downloads/Projeto SD/meio_somador/Waveform.vwf...
+
+Reading /home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/meio_somador.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to /home/aluno/Downloads/Projeto SD/meio_somador/simulation/qsim/meio_somador_20180914134715.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

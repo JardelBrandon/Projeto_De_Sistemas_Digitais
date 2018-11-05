@@ -1,0 +1,137 @@
+$comment
+	File created using the following command:
+		vcd file somador_completo.msim.vcd -direction
+$end
+$date
+	Fri Sep 14 14:08:17 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module somador_completo_vlg_vec_tst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # cin $end
+$var wire 1 $ cout $end
+$var wire 1 % s $end
+
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , s~output_o $end
+$var wire 1 - cout~output_o $end
+$var wire 1 . cin~input_o $end
+$var wire 1 / a~input_o $end
+$var wire 1 0 b~input_o $end
+$var wire 1 1 MS2|s~combout $end
+$var wire 1 2 cout~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+1'
+x(
+1)
+1*
+1+
+0,
+0-
+0.
+0/
+00
+01
+02
+$end
+#50000
+1!
+1/
+11
+1,
+1%
+#60000
+1"
+10
+12
+01
+0,
+1-
+1$
+0%
+#90000
+0"
+00
+02
+11
+1,
+0-
+0$
+1%
+#140000
+1#
+1"
+1.
+10
+12
+1-
+1$
+#240000
+0!
+0#
+0"
+0/
+0.
+00
+02
+01
+0,
+0-
+0$
+0%
+#370000
+1!
+1#
+1/
+1.
+12
+1-
+1$
+#430000
+0!
+0#
+0/
+0.
+02
+0-
+0$
+#520000
+1"
+1!
+10
+1/
+12
+1-
+1$
+#580000
+0"
+0!
+00
+0/
+02
+0-
+0$
+#1000000

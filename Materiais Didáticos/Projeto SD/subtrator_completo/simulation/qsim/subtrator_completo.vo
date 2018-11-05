@@ -1,0 +1,173 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+
+// DATE "09/14/2018 15:20:35"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module subtrator_completo (
+	a,
+	b,
+	bi,
+	s,
+	bo);
+input 	a;
+input 	b;
+input 	bi;
+output 	s;
+output 	bo;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \s~output_o ;
+wire \bo~output_o ;
+wire \a~input_o ;
+wire \b~input_o ;
+wire \bi~input_o ;
+wire \s~0_combout ;
+wire \bo~0_combout ;
+
+
+cyclonev_io_obuf \s~output (
+	.i(\s~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\s~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \s~output .bus_hold = "false";
+defparam \s~output .open_drain_output = "false";
+defparam \s~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \bo~output (
+	.i(\bo~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\bo~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \bo~output .bus_hold = "false";
+defparam \bo~output .open_drain_output = "false";
+defparam \bo~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \a~input (
+	.i(a),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\a~input_o ));
+// synopsys translate_off
+defparam \a~input .bus_hold = "false";
+defparam \a~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \b~input (
+	.i(b),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\b~input_o ));
+// synopsys translate_off
+defparam \b~input .bus_hold = "false";
+defparam \b~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \bi~input (
+	.i(bi),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\bi~input_o ));
+// synopsys translate_off
+defparam \bi~input .bus_hold = "false";
+defparam \bi~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \s~0 (
+// Equation(s):
+// \s~0_combout  = !\a~input_o  $ (!\b~input_o  $ (\bi~input_o ))
+
+	.dataa(!\a~input_o ),
+	.datab(!\b~input_o ),
+	.datac(!\bi~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\s~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \s~0 .extended_lut = "off";
+defparam \s~0 .lut_mask = 64'h6969696969696969;
+defparam \s~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \bo~0 (
+// Equation(s):
+// \bo~0_combout  = (!\a~input_o  & ((\bi~input_o ) # (\b~input_o ))) # (\a~input_o  & (\b~input_o  & \bi~input_o ))
+
+	.dataa(!\a~input_o ),
+	.datab(!\b~input_o ),
+	.datac(!\bi~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\bo~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \bo~0 .extended_lut = "off";
+defparam \bo~0 .lut_mask = 64'h2B2B2B2B2B2B2B2B;
+defparam \bo~0 .shared_arith = "off";
+// synopsys translate_on
+
+assign s = \s~output_o ;
+
+assign bo = \bo~output_o ;
+
+endmodule

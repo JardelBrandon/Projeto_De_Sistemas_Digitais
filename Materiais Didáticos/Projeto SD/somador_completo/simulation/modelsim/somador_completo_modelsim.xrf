@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, /home/aluno/Downloads/Projeto SD/somador_completo/somador_completo.sv
+source_file = 1, /home/aluno/Downloads/Projeto SD/somador_completo/meio_somador.sv
+source_file = 1, /home/aluno/Downloads/Projeto SD/somador_completo/Waveform.vwf
+source_file = 1, /home/aluno/Downloads/Projeto SD/somador_completo/db/somador_completo.cbx.xml
+design_name = somador_completo
+instance = comp, \s~output , s~output, somador_completo, 1
+instance = comp, \cout~output , cout~output, somador_completo, 1
+instance = comp, \a~input , a~input, somador_completo, 1
+instance = comp, \cin~input , cin~input, somador_completo, 1
+instance = comp, \b~input , b~input, somador_completo, 1
+instance = comp, \MS2|s , MS2|s, somador_completo, 1
+instance = comp, \cout~0 , cout~0, somador_completo, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, somador_completo, 1
