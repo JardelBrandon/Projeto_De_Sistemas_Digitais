@@ -1,0 +1,29 @@
+# do subtrator_completo.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:55:14 on Sep 14,2018
+# vlog -work work subtrator_completo.vo 
+# -- Compiling module subtrator_completo
+# 
+# Top level modules:
+# 	subtrator_completo
+# End time: 15:55:14 on Sep 14,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:55:14 on Sep 14,2018
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module subtrator_completo_vlg_vec_tst
+# 
+# Top level modules:
+# 	subtrator_completo_vlg_vec_tst
+# End time: 15:55:14 on Sep 14,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.subtrator_completo_vlg_vec_tst 
+# Start time: 15:55:14 on Sep 14,2018
+# Loading work.subtrator_completo_vlg_vec_tst
+# Loading work.subtrator_completo
+# after#25
+# ** Note: $finish    : Waveform.vwf.vt(50)
+#    Time: 1 us  Iteration: 0  Instance: /subtrator_completo_vlg_vec_tst
+# End time: 15:55:14 on Sep 14,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Atividades/Contador_De_Bits/simulation/qsim
+vcontador_de_bits
+Z0 !s110 1543597730
+!i10b 1
+!s100 3D?ffgzhX<c<iheUXmA@53
+I]7dI9GI:B4G8@>Q016aA@2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/media/aluno/BRANDON/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/Contador_De_Bits/simulation/qsim
+w1543597729
+8contador_de_bits.vo
+Fcontador_de_bits.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1543597730.000000
+!s107 contador_de_bits.vo|
+!s90 -work|work|contador_de_bits.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vcontador_de_bits_vlg_vec_tst
+R0
+!i10b 1
+!s100 _2n5fO7_jo^bDWdSSE@HB0
+Ijl[=1^CV>5iK9BKQKURIo2
+R1
+R2
+w1543597727
+8Waveform14.vwf.vt
+FWaveform14.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform14.vwf.vt|
+!s90 -work|work|Waveform14.vwf.vt|
+!i113 1
+R5
+R6

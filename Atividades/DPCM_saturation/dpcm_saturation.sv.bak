@@ -1,0 +1,26 @@
+module dpcm_saturation(
+	input clk, reset,
+	reg signed [7:0] entrada,
+	reg signed [7:0] saida
+);
+
+	reg signed [7:0] entrada_anterior;
+	wire [7:0] fio_entrada, fio_saida;
+	saturation s(clk, reset, fio_entrada, fio_saida);
+	
+	always @ (posedge clk or posedge reset) 
+	if (reset)
+		begin
+			saida = 0;
+			entrada_anterior = 0;
+		end
+	else 
+		if (entrada == entrada_anterior);
+		else
+			begin
+				fio_entrada = entrada;
+				saida = fio_saida;
+				entrada_anterior = entrada;
+			end
+
+endmodule 

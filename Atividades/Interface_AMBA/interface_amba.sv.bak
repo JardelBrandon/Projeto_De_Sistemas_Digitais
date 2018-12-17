@@ -1,0 +1,35 @@
+module interface_amba(
+	input PCLK, PRESETn, PWRITE, PREADY, PSLVERR
+	output PSELx, PENABLE,
+	input reg signed [7:0] PADDR, PWDATA, PRDATA
+	output [1:0] estados
+)
+
+	typedef enum reg [1:0] {IDLE, DATA_IN, COUNT} states;
+	states state;
+	assign estados = state;
+	
+	always @ (posedge clk or posedge reset) 
+	begin
+		if (reset)
+			state <= IDLE;
+		else
+			case (state)
+				IDLE:
+					begin
+						PSELx = 0;
+						PENABLE = 0;
+					end
+				SETUP:
+					begin
+						PSELx = 0;
+						PENABLE = 0;
+					end
+				ACCESS:
+					begin
+						PSELx = 1;
+						PENABLE = 1;
+					end
+	end
+
+endmodule 

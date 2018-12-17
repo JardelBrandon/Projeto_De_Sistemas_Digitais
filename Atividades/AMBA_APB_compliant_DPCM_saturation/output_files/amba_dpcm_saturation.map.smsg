@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at saturation.sv(9): always construct contains both blocking and non-blocking assignments File: /media/aluno/BRANDON/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/AMBA_APB_compliant_DPCM_saturation/saturation.sv Line: 9

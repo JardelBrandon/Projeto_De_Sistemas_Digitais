@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/media/aluno/BRANDON/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/Saturation/simulation/qsim
+vsaturation
+!s110 1544205754
+!i10b 1
+!s100 RXkfHP;[VNhbRKQS;]QcW3
+I029nGiJZ[`Nd=WRK?R]ko0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1544205752
+8saturation.vo
+Fsaturation.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1544205754.000000
+!s107 saturation.vo|
+!s90 -work|work|saturation.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vsaturation_vlg_vec_tst
+!s110 1544205755
+!i10b 1
+!s100 APhQ28e8XHOjh>UCD>QoA0
+I@^SA<YjEHMm`>S55oSSo60
+R1
+R0
+w1544205750
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+R3
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5

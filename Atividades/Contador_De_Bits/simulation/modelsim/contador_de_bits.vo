@@ -1,0 +1,1251 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+
+// DATE "11/23/2018 15:28:18"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module contador_de_bits (
+	clk,
+	valid_in,
+	reset,
+	data_in,
+	read_in,
+	data_out,
+	estados);
+input 	clk;
+input 	valid_in;
+input 	reset;
+input 	[7:0] data_in;
+output 	read_in;
+output 	[2:0] data_out;
+output 	[1:0] estados;
+
+// Design Ports Information
+// read_in	=>  Location: PIN_L17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_out[0]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_out[1]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_out[2]	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// estados[0]	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// estados[1]	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// valid_in	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_K17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[7]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[5]	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[4]	=>  Location: PIN_P17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[6]	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[1]	=>  Location: PIN_L22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[3]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[0]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// data_in[2]	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \clk~input_o ;
+wire \clk~inputCLKENA0_outclk ;
+wire \Selector2~0_combout ;
+wire \Selector5~0_combout ;
+wire \always0~0_combout ;
+wire \valid_in~input_o ;
+wire \state~7_combout ;
+wire \reset~input_o ;
+wire \state.IDLE~q ;
+wire \Selector0~0_combout ;
+wire \state.DATA_IN~q ;
+wire \Selector3~0_combout ;
+wire \Selector4~0_combout ;
+wire \Selector6~0_combout ;
+wire \Selector1~0_combout ;
+wire \state.COUNT~q ;
+wire \Selector8~0_combout ;
+wire \read_in$latch~combout ;
+wire \Selector1~1_combout ;
+wire \data_in[7]~input_o ;
+wire \data_in[6]~input_o ;
+wire \data_in[5]~input_o ;
+wire \data_in[2]~input_o ;
+wire \data_in[1]~input_o ;
+wire \data_in[3]~input_o ;
+wire \data_in[0]~input_o ;
+wire \Mux0~4_combout ;
+wire \data_in[4]~input_o ;
+wire \Mux0~0_combout ;
+wire \bit_para_contagem~0_combout ;
+wire \bit_para_contagem~combout ;
+wire \data_out[0]$latch~0_combout ;
+wire \Add0~0_combout ;
+wire \data_out[2]~0_combout ;
+wire \data_out[1]$latch~combout ;
+wire \Add0~1_combout ;
+wire \data_out[2]$latch~combout ;
+wire [7:0] data;
+wire [3:0] contador;
+
+
+// Location: IOOBUF_X89_Y37_N22
+cyclonev_io_obuf \read_in~output (
+	.i(\read_in$latch~combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(read_in),
+	.obar());
+// synopsys translate_off
+defparam \read_in~output .bus_hold = "false";
+defparam \read_in~output .open_drain_output = "false";
+defparam \read_in~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y37_N56
+cyclonev_io_obuf \data_out[0]~output (
+	.i(\data_out[0]$latch~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(data_out[0]),
+	.obar());
+// synopsys translate_off
+defparam \data_out[0]~output .bus_hold = "false";
+defparam \data_out[0]~output .open_drain_output = "false";
+defparam \data_out[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y36_N5
+cyclonev_io_obuf \data_out[1]~output (
+	.i(\data_out[1]$latch~combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(data_out[1]),
+	.obar());
+// synopsys translate_off
+defparam \data_out[1]~output .bus_hold = "false";
+defparam \data_out[1]~output .open_drain_output = "false";
+defparam \data_out[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y37_N39
+cyclonev_io_obuf \data_out[2]~output (
+	.i(\data_out[2]$latch~combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(data_out[2]),
+	.obar());
+// synopsys translate_off
+defparam \data_out[2]~output .bus_hold = "false";
+defparam \data_out[2]~output .open_drain_output = "false";
+defparam \data_out[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y35_N79
+cyclonev_io_obuf \estados[0]~output (
+	.i(\state.DATA_IN~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(estados[0]),
+	.obar());
+// synopsys translate_off
+defparam \estados[0]~output .bus_hold = "false";
+defparam \estados[0]~output .open_drain_output = "false";
+defparam \estados[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y35_N45
+cyclonev_io_obuf \estados[1]~output (
+	.i(\state.COUNT~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(estados[1]),
+	.obar());
+// synopsys translate_off
+defparam \estados[1]~output .bus_hold = "false";
+defparam \estados[1]~output .open_drain_output = "false";
+defparam \estados[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y35_N61
+cyclonev_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G10
+cyclonev_clkena \clk~inputCLKENA0 (
+	.inclk(\clk~input_o ),
+	.ena(vcc),
+	.outclk(\clk~inputCLKENA0_outclk ),
+	.enaout());
+// synopsys translate_off
+defparam \clk~inputCLKENA0 .clock_type = "global clock";
+defparam \clk~inputCLKENA0 .disable_mode = "low";
+defparam \clk~inputCLKENA0 .ena_register_mode = "always enabled";
+defparam \clk~inputCLKENA0 .ena_register_power_up = "high";
+defparam \clk~inputCLKENA0 .test_syn = "high";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N57
+cyclonev_lcell_comb \Selector2~0 (
+// Equation(s):
+// \Selector2~0_combout  = ( \state.COUNT~q  & ( !contador[0] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!contador[0]),
+	.datae(gnd),
+	.dataf(!\state.COUNT~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector2~0 .extended_lut = "off";
+defparam \Selector2~0 .lut_mask = 64'h00000000FF00FF00;
+defparam \Selector2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N54
+cyclonev_lcell_comb \contador[0] (
+// Equation(s):
+// contador[0] = ( \Selector3~0_combout  & ( \Selector2~0_combout  ) ) # ( !\Selector3~0_combout  & ( contador[0] ) )
+
+	.dataa(!\Selector2~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!contador[0]),
+	.datae(gnd),
+	.dataf(!\Selector3~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(contador[0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[0] .extended_lut = "off";
+defparam \contador[0] .lut_mask = 64'h00FF00FF55555555;
+defparam \contador[0] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N27
+cyclonev_lcell_comb \Selector5~0 (
+// Equation(s):
+// \Selector5~0_combout  = ( \state.COUNT~q  & ( !contador[2] $ (((!contador[1]) # (!contador[0]))) ) )
+
+	.dataa(!contador[1]),
+	.datab(gnd),
+	.datac(!contador[0]),
+	.datad(!contador[2]),
+	.datae(gnd),
+	.dataf(!\state.COUNT~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector5~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector5~0 .extended_lut = "off";
+defparam \Selector5~0 .lut_mask = 64'h0000000005FA05FA;
+defparam \Selector5~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N0
+cyclonev_lcell_comb \contador[2] (
+// Equation(s):
+// contador[2] = ( contador[2] & ( (!\Selector3~0_combout ) # (\Selector5~0_combout ) ) ) # ( !contador[2] & ( (\Selector5~0_combout  & \Selector3~0_combout ) ) )
+
+	.dataa(gnd),
+	.datab(!\Selector5~0_combout ),
+	.datac(!\Selector3~0_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!contador[2]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(contador[2]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[2] .extended_lut = "off";
+defparam \contador[2] .lut_mask = 64'h03030303F3F3F3F3;
+defparam \contador[2] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N42
+cyclonev_lcell_comb \always0~0 (
+// Equation(s):
+// \always0~0_combout  = ( !contador[1] & ( (!contador[3] & (!contador[2] & !contador[0])) ) )
+
+	.dataa(!contador[3]),
+	.datab(gnd),
+	.datac(!contador[2]),
+	.datad(!contador[0]),
+	.datae(gnd),
+	.dataf(!contador[1]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\always0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \always0~0 .extended_lut = "off";
+defparam \always0~0 .lut_mask = 64'hA000A00000000000;
+defparam \always0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y35_N95
+cyclonev_io_ibuf \valid_in~input (
+	.i(valid_in),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\valid_in~input_o ));
+// synopsys translate_off
+defparam \valid_in~input .bus_hold = "false";
+defparam \valid_in~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N42
+cyclonev_lcell_comb \state~7 (
+// Equation(s):
+// \state~7_combout  = ( contador[2] & ( (!\state.COUNT~q ) # ((!contador[1] & !contador[3])) ) ) # ( !contador[2] & ( (!\state.COUNT~q ) # (!contador[3]) ) )
+
+	.dataa(gnd),
+	.datab(!contador[1]),
+	.datac(!\state.COUNT~q ),
+	.datad(!contador[3]),
+	.datae(gnd),
+	.dataf(!contador[2]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\state~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \state~7 .extended_lut = "off";
+defparam \state~7 .lut_mask = 64'hFFF0FFF0FCF0FCF0;
+defparam \state~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y37_N4
+cyclonev_io_ibuf \reset~input (
+	.i(reset),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\reset~input_o ));
+// synopsys translate_off
+defparam \reset~input .bus_hold = "false";
+defparam \reset~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: FF_X88_Y24_N44
+dffeas \state.IDLE (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\state~7_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.IDLE~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.IDLE .is_wysiwyg = "true";
+defparam \state.IDLE .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N24
+cyclonev_lcell_comb \Selector0~0 (
+// Equation(s):
+// \Selector0~0_combout  = ( \valid_in~input_o  & ( !\state.IDLE~q  ) ) # ( !\valid_in~input_o  & ( (!\state.IDLE~q ) # (\state.DATA_IN~q ) ) )
+
+	.dataa(gnd),
+	.datab(!\state.IDLE~q ),
+	.datac(gnd),
+	.datad(!\state.DATA_IN~q ),
+	.datae(gnd),
+	.dataf(!\valid_in~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector0~0 .extended_lut = "off";
+defparam \Selector0~0 .lut_mask = 64'hCCFFCCFFCCCCCCCC;
+defparam \Selector0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X88_Y24_N26
+dffeas \state.DATA_IN (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\Selector0~0_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.DATA_IN~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.DATA_IN .is_wysiwyg = "true";
+defparam \state.DATA_IN .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N3
+cyclonev_lcell_comb \Selector3~0 (
+// Equation(s):
+// \Selector3~0_combout  = ( \state.DATA_IN~q  & ( ((!\always0~0_combout  & \state.COUNT~q )) # (\valid_in~input_o ) ) ) # ( !\state.DATA_IN~q  & ( (\state.COUNT~q  & ((!\always0~0_combout ) # (\valid_in~input_o ))) ) )
+
+	.dataa(!\always0~0_combout ),
+	.datab(gnd),
+	.datac(!\valid_in~input_o ),
+	.datad(!\state.COUNT~q ),
+	.datae(gnd),
+	.dataf(!\state.DATA_IN~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector3~0 .extended_lut = "off";
+defparam \Selector3~0 .lut_mask = 64'h00AF00AF0FAF0FAF;
+defparam \Selector3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N45
+cyclonev_lcell_comb \Selector4~0 (
+// Equation(s):
+// \Selector4~0_combout  = ( \state.COUNT~q  & ( !contador[1] $ (!contador[0]) ) )
+
+	.dataa(gnd),
+	.datab(!contador[1]),
+	.datac(gnd),
+	.datad(!contador[0]),
+	.datae(gnd),
+	.dataf(!\state.COUNT~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector4~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector4~0 .extended_lut = "off";
+defparam \Selector4~0 .lut_mask = 64'h0000000033CC33CC;
+defparam \Selector4~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N15
+cyclonev_lcell_comb \contador[1] (
+// Equation(s):
+// contador[1] = ( \Selector4~0_combout  & ( (\Selector3~0_combout ) # (contador[1]) ) ) # ( !\Selector4~0_combout  & ( (contador[1] & !\Selector3~0_combout ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!contador[1]),
+	.datad(!\Selector3~0_combout ),
+	.datae(gnd),
+	.dataf(!\Selector4~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(contador[1]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[1] .extended_lut = "off";
+defparam \contador[1] .lut_mask = 64'h0F000F000FFF0FFF;
+defparam \contador[1] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N12
+cyclonev_lcell_comb \Selector6~0 (
+// Equation(s):
+// \Selector6~0_combout  = ( \state.COUNT~q  & ( !contador[3] $ (((!contador[1]) # ((!contador[2]) # (!contador[0])))) ) )
+
+	.dataa(!contador[1]),
+	.datab(!contador[2]),
+	.datac(!contador[0]),
+	.datad(!contador[3]),
+	.datae(gnd),
+	.dataf(!\state.COUNT~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector6~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector6~0 .extended_lut = "off";
+defparam \Selector6~0 .lut_mask = 64'h0000000001FE01FE;
+defparam \Selector6~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N51
+cyclonev_lcell_comb \contador[3] (
+// Equation(s):
+// contador[3] = ( contador[3] & ( (!\Selector3~0_combout ) # (\Selector6~0_combout ) ) ) # ( !contador[3] & ( (\Selector6~0_combout  & \Selector3~0_combout ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\Selector6~0_combout ),
+	.datad(!\Selector3~0_combout ),
+	.datae(gnd),
+	.dataf(!contador[3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(contador[3]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[3] .extended_lut = "off";
+defparam \contador[3] .lut_mask = 64'h000F000FFF0FFF0F;
+defparam \contador[3] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N54
+cyclonev_lcell_comb \Selector1~0 (
+// Equation(s):
+// \Selector1~0_combout  = ( \state.COUNT~q  & ( \state.DATA_IN~q  & ( ((!contador[3] & ((!contador[2]) # (!contador[1])))) # (\valid_in~input_o ) ) ) ) # ( !\state.COUNT~q  & ( \state.DATA_IN~q  & ( \valid_in~input_o  ) ) ) # ( \state.COUNT~q  & ( 
+// !\state.DATA_IN~q  & ( (!contador[3] & ((!contador[2]) # (!contador[1]))) ) ) )
+
+	.dataa(!contador[3]),
+	.datab(!\valid_in~input_o ),
+	.datac(!contador[2]),
+	.datad(!contador[1]),
+	.datae(!\state.COUNT~q ),
+	.dataf(!\state.DATA_IN~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector1~0 .extended_lut = "off";
+defparam \Selector1~0 .lut_mask = 64'h0000AAA03333BBB3;
+defparam \Selector1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X88_Y24_N56
+dffeas \state.COUNT (
+	.clk(\clk~inputCLKENA0_outclk ),
+	.d(\Selector1~0_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\state.COUNT~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \state.COUNT .is_wysiwyg = "true";
+defparam \state.COUNT .power_up = "low";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N24
+cyclonev_lcell_comb \Selector8~0 (
+// Equation(s):
+// \Selector8~0_combout  = ( \state.IDLE~q  & ( \always0~0_combout  & ( (!\valid_in~input_o  & \state.COUNT~q ) ) ) ) # ( !\state.IDLE~q  & ( \always0~0_combout  ) ) # ( !\state.IDLE~q  & ( !\always0~0_combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\valid_in~input_o ),
+	.datad(!\state.COUNT~q ),
+	.datae(!\state.IDLE~q ),
+	.dataf(!\always0~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector8~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector8~0 .extended_lut = "off";
+defparam \Selector8~0 .lut_mask = 64'hFFFF0000FFFF00F0;
+defparam \Selector8~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N9
+cyclonev_lcell_comb read_in$latch(
+// Equation(s):
+// \read_in$latch~combout  = ( \Selector8~0_combout  & ( !\state.COUNT~q  ) ) # ( !\Selector8~0_combout  & ( \read_in$latch~combout  ) )
+
+	.dataa(gnd),
+	.datab(!\state.COUNT~q ),
+	.datac(!\read_in$latch~combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\Selector8~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\read_in$latch~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam read_in$latch.extended_lut = "off";
+defparam read_in$latch.lut_mask = 64'h0F0F0F0FCCCCCCCC;
+defparam read_in$latch.shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N39
+cyclonev_lcell_comb \Selector1~1 (
+// Equation(s):
+// \Selector1~1_combout  = ( \state.DATA_IN~q  & ( \valid_in~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\valid_in~input_o ),
+	.datae(gnd),
+	.dataf(!\state.DATA_IN~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector1~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector1~1 .extended_lut = "off";
+defparam \Selector1~1 .lut_mask = 64'h0000000000FF00FF;
+defparam \Selector1~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y38_N38
+cyclonev_io_ibuf \data_in[7]~input (
+	.i(data_in[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[7]~input_o ));
+// synopsys translate_off
+defparam \data_in[7]~input .bus_hold = "false";
+defparam \data_in[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N12
+cyclonev_lcell_comb \data[7] (
+// Equation(s):
+// data[7] = ( data[7] & ( (!\Selector1~1_combout ) # (\data_in[7]~input_o ) ) ) # ( !data[7] & ( (\Selector1~1_combout  & \data_in[7]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\Selector1~1_combout ),
+	.datac(!\data_in[7]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!data[7]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[7]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[7] .extended_lut = "off";
+defparam \data[7] .lut_mask = 64'h03030303CFCFCFCF;
+defparam \data[7] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y38_N55
+cyclonev_io_ibuf \data_in[6]~input (
+	.i(data_in[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[6]~input_o ));
+// synopsys translate_off
+defparam \data_in[6]~input .bus_hold = "false";
+defparam \data_in[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N3
+cyclonev_lcell_comb \data[6] (
+// Equation(s):
+// data[6] = ( \Selector1~1_combout  & ( \data_in[6]~input_o  ) ) # ( !\Selector1~1_combout  & ( data[6] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\data_in[6]~input_o ),
+	.datad(!data[6]),
+	.datae(gnd),
+	.dataf(!\Selector1~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[6]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[6] .extended_lut = "off";
+defparam \data[6] .lut_mask = 64'h00FF00FF0F0F0F0F;
+defparam \data[6] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y36_N21
+cyclonev_io_ibuf \data_in[5]~input (
+	.i(data_in[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[5]~input_o ));
+// synopsys translate_off
+defparam \data_in[5]~input .bus_hold = "false";
+defparam \data_in[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N45
+cyclonev_lcell_comb \data[5] (
+// Equation(s):
+// data[5] = ( \Selector1~1_combout  & ( \data_in[5]~input_o  ) ) # ( !\Selector1~1_combout  & ( data[5] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\data_in[5]~input_o ),
+	.datad(!data[5]),
+	.datae(gnd),
+	.dataf(!\Selector1~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[5]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[5] .extended_lut = "off";
+defparam \data[5] .lut_mask = 64'h00FF00FF0F0F0F0F;
+defparam \data[5] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y38_N4
+cyclonev_io_ibuf \data_in[2]~input (
+	.i(data_in[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[2]~input_o ));
+// synopsys translate_off
+defparam \data_in[2]~input .bus_hold = "false";
+defparam \data_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N15
+cyclonev_lcell_comb \data[2] (
+// Equation(s):
+// data[2] = ( data[2] & ( (!\Selector1~1_combout ) # (\data_in[2]~input_o ) ) ) # ( !data[2] & ( (\Selector1~1_combout  & \data_in[2]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\Selector1~1_combout ),
+	.datac(!\data_in[2]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!data[2]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[2]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[2] .extended_lut = "off";
+defparam \data[2] .lut_mask = 64'h03030303CFCFCFCF;
+defparam \data[2] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y36_N55
+cyclonev_io_ibuf \data_in[1]~input (
+	.i(data_in[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[1]~input_o ));
+// synopsys translate_off
+defparam \data_in[1]~input .bus_hold = "false";
+defparam \data_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N36
+cyclonev_lcell_comb \data[1] (
+// Equation(s):
+// data[1] = ( \Selector1~1_combout  & ( \data_in[1]~input_o  ) ) # ( !\Selector1~1_combout  & ( data[1] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\data_in[1]~input_o ),
+	.datad(!data[1]),
+	.datae(gnd),
+	.dataf(!\Selector1~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[1]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[1] .extended_lut = "off";
+defparam \data[1] .lut_mask = 64'h00FF00FF0F0F0F0F;
+defparam \data[1] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y38_N21
+cyclonev_io_ibuf \data_in[3]~input (
+	.i(data_in[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[3]~input_o ));
+// synopsys translate_off
+defparam \data_in[3]~input .bus_hold = "false";
+defparam \data_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N48
+cyclonev_lcell_comb \data[3] (
+// Equation(s):
+// data[3] = ( data[3] & ( (!\Selector1~1_combout ) # (\data_in[3]~input_o ) ) ) # ( !data[3] & ( (\Selector1~1_combout  & \data_in[3]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\Selector1~1_combout ),
+	.datac(gnd),
+	.datad(!\data_in[3]~input_o ),
+	.datae(gnd),
+	.dataf(!data[3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[3]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[3] .extended_lut = "off";
+defparam \data[3] .lut_mask = 64'h00330033CCFFCCFF;
+defparam \data[3] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y36_N38
+cyclonev_io_ibuf \data_in[0]~input (
+	.i(data_in[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[0]~input_o ));
+// synopsys translate_off
+defparam \data_in[0]~input .bus_hold = "false";
+defparam \data_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N51
+cyclonev_lcell_comb \data[0] (
+// Equation(s):
+// data[0] = ( data[0] & ( (!\Selector1~1_combout ) # (\data_in[0]~input_o ) ) ) # ( !data[0] & ( (\Selector1~1_combout  & \data_in[0]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\Selector1~1_combout ),
+	.datac(!\data_in[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!data[0]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[0] .extended_lut = "off";
+defparam \data[0] .lut_mask = 64'h03030303CFCFCFCF;
+defparam \data[0] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N18
+cyclonev_lcell_comb \Mux0~4 (
+// Equation(s):
+// \Mux0~4_combout  = ( !contador[1] & ( (!contador[2] & ((!contador[0] & (data[0])) # (contador[0] & (((data[1])))))) # (contador[2] & (contador[0])) ) ) # ( contador[1] & ( (!contador[2] & ((!contador[0] & (data[2])) # (contador[0] & (((data[3])))))) # 
+// (contador[2] & (contador[0])) ) )
+
+	.dataa(!contador[2]),
+	.datab(!contador[0]),
+	.datac(!data[2]),
+	.datad(!data[1]),
+	.datae(!contador[1]),
+	.dataf(!data[3]),
+	.datag(!data[0]),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Mux0~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Mux0~4 .extended_lut = "on";
+defparam \Mux0~4 .lut_mask = 64'h193B1919193B3B3B;
+defparam \Mux0~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y9_N21
+cyclonev_io_ibuf \data_in[4]~input (
+	.i(data_in[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\data_in[4]~input_o ));
+// synopsys translate_off
+defparam \data_in[4]~input .bus_hold = "false";
+defparam \data_in[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N0
+cyclonev_lcell_comb \data[4] (
+// Equation(s):
+// data[4] = ( \Selector1~1_combout  & ( \data_in[4]~input_o  ) ) # ( !\Selector1~1_combout  & ( data[4] ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\data_in[4]~input_o ),
+	.datad(!data[4]),
+	.datae(gnd),
+	.dataf(!\Selector1~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(data[4]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data[4] .extended_lut = "off";
+defparam \data[4] .lut_mask = 64'h00FF00FF0F0F0F0F;
+defparam \data[4] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N6
+cyclonev_lcell_comb \Mux0~0 (
+// Equation(s):
+// \Mux0~0_combout  = ( !contador[1] & ( (!contador[2] & ((((\Mux0~4_combout ))))) # (contador[2] & (((!\Mux0~4_combout  & (data[4])) # (\Mux0~4_combout  & ((data[5])))))) ) ) # ( contador[1] & ( (!contador[2] & ((((\Mux0~4_combout ))))) # (contador[2] & 
+// (((!\Mux0~4_combout  & ((data[6]))) # (\Mux0~4_combout  & (data[7]))))) ) )
+
+	.dataa(!contador[2]),
+	.datab(!data[7]),
+	.datac(!data[6]),
+	.datad(!data[5]),
+	.datae(!contador[1]),
+	.dataf(!\Mux0~4_combout ),
+	.datag(!data[4]),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Mux0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Mux0~0 .extended_lut = "on";
+defparam \Mux0~0 .lut_mask = 64'h05050505AAFFBBBB;
+defparam \Mux0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y24_N30
+cyclonev_lcell_comb \bit_para_contagem~0 (
+// Equation(s):
+// \bit_para_contagem~0_combout  = ( !\valid_in~input_o  & ( !contador[3] & ( (!contador[0] & (!contador[1] & (!contador[2] & \state.COUNT~q ))) ) ) )
+
+	.dataa(!contador[0]),
+	.datab(!contador[1]),
+	.datac(!contador[2]),
+	.datad(!\state.COUNT~q ),
+	.datae(!\valid_in~input_o ),
+	.dataf(!contador[3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\bit_para_contagem~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \bit_para_contagem~0 .extended_lut = "off";
+defparam \bit_para_contagem~0 .lut_mask = 64'h0080000000000000;
+defparam \bit_para_contagem~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N6
+cyclonev_lcell_comb bit_para_contagem(
+// Equation(s):
+// \bit_para_contagem~combout  = ( \bit_para_contagem~0_combout  & ( data[7] ) ) # ( !\bit_para_contagem~0_combout  & ( \bit_para_contagem~combout  ) )
+
+	.dataa(!data[7]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\bit_para_contagem~combout ),
+	.datae(gnd),
+	.dataf(!\bit_para_contagem~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\bit_para_contagem~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam bit_para_contagem.extended_lut = "off";
+defparam bit_para_contagem.lut_mask = 64'h00FF00FF55555555;
+defparam bit_para_contagem.shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N36
+cyclonev_lcell_comb \data_out[0]$latch~0 (
+// Equation(s):
+// \data_out[0]$latch~0_combout  = ( \state.COUNT~q  & ( \valid_in~input_o  & ( !\Mux0~0_combout  $ (!\data_out[0]$latch~0_combout  $ (!\bit_para_contagem~combout )) ) ) ) # ( !\state.COUNT~q  & ( \valid_in~input_o  & ( \data_out[0]$latch~0_combout  ) ) ) # 
+// ( \state.COUNT~q  & ( !\valid_in~input_o  & ( !\data_out[0]$latch~0_combout  $ (((!\Mux0~0_combout  $ (!\bit_para_contagem~combout )) # (\always0~0_combout ))) ) ) ) # ( !\state.COUNT~q  & ( !\valid_in~input_o  & ( \data_out[0]$latch~0_combout  ) ) )
+
+	.dataa(!\Mux0~0_combout ),
+	.datab(!\always0~0_combout ),
+	.datac(!\data_out[0]$latch~0_combout ),
+	.datad(!\bit_para_contagem~combout ),
+	.datae(!\state.COUNT~q ),
+	.dataf(!\valid_in~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\data_out[0]$latch~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data_out[0]$latch~0 .extended_lut = "off";
+defparam \data_out[0]$latch~0 .lut_mask = 64'h0F0F874B0F0FA55A;
+defparam \data_out[0]$latch~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N30
+cyclonev_lcell_comb \Add0~0 (
+// Equation(s):
+// \Add0~0_combout  = ( \data_out[0]$latch~0_combout  & ( !\data_out[1]$latch~combout  ) ) # ( !\data_out[0]$latch~0_combout  & ( \data_out[1]$latch~combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\data_out[1]$latch~combout ),
+	.datae(gnd),
+	.dataf(!\data_out[0]$latch~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Add0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Add0~0 .extended_lut = "off";
+defparam \Add0~0 .lut_mask = 64'h00FF00FFFF00FF00;
+defparam \Add0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N48
+cyclonev_lcell_comb \data_out[2]~0 (
+// Equation(s):
+// \data_out[2]~0_combout  = ( \valid_in~input_o  & ( (\state.COUNT~q  & (!\bit_para_contagem~combout  $ (\Mux0~0_combout ))) ) ) # ( !\valid_in~input_o  & ( (!\always0~0_combout  & (\state.COUNT~q  & (!\bit_para_contagem~combout  $ (\Mux0~0_combout )))) ) )
+
+	.dataa(!\always0~0_combout ),
+	.datab(!\bit_para_contagem~combout ),
+	.datac(!\state.COUNT~q ),
+	.datad(!\Mux0~0_combout ),
+	.datae(gnd),
+	.dataf(!\valid_in~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\data_out[2]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data_out[2]~0 .extended_lut = "off";
+defparam \data_out[2]~0 .lut_mask = 64'h080208020C030C03;
+defparam \data_out[2]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N33
+cyclonev_lcell_comb \data_out[1]$latch (
+// Equation(s):
+// \data_out[1]$latch~combout  = ( \data_out[2]~0_combout  & ( \Add0~0_combout  ) ) # ( !\data_out[2]~0_combout  & ( \data_out[1]$latch~combout  ) )
+
+	.dataa(!\data_out[1]$latch~combout ),
+	.datab(!\Add0~0_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\data_out[2]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\data_out[1]$latch~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data_out[1]$latch .extended_lut = "off";
+defparam \data_out[1]$latch .lut_mask = 64'h5555555533333333;
+defparam \data_out[1]$latch .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N18
+cyclonev_lcell_comb \Add0~1 (
+// Equation(s):
+// \Add0~1_combout  = ( \data_out[0]$latch~0_combout  & ( !\data_out[2]$latch~combout  $ (!\data_out[1]$latch~combout ) ) ) # ( !\data_out[0]$latch~0_combout  & ( \data_out[2]$latch~combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\data_out[2]$latch~combout ),
+	.datad(!\data_out[1]$latch~combout ),
+	.datae(gnd),
+	.dataf(!\data_out[0]$latch~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Add0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Add0~1 .extended_lut = "off";
+defparam \Add0~1 .lut_mask = 64'h0F0F0F0F0FF00FF0;
+defparam \Add0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y24_N21
+cyclonev_lcell_comb \data_out[2]$latch (
+// Equation(s):
+// \data_out[2]$latch~combout  = ( \data_out[2]~0_combout  & ( \Add0~1_combout  ) ) # ( !\data_out[2]~0_combout  & ( \data_out[2]$latch~combout  ) )
+
+	.dataa(!\Add0~1_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\data_out[2]$latch~combout ),
+	.datae(gnd),
+	.dataf(!\data_out[2]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\data_out[2]$latch~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \data_out[2]$latch .extended_lut = "off";
+defparam \data_out[2]$latch .lut_mask = 64'h00FF00FF55555555;
+defparam \data_out[2]$latch .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X48_Y18_N3
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

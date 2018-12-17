@@ -1,0 +1,12 @@
+module amba_dpcm_saturation(
+	input clk, reset,
+	reg signed [7:0] entrada;
+	reg signed [7:0] saida
+);
+
+	wire [7:0] fio;
+	
+	dpcm d(clk, reset, entrada, fio);
+	saturation(clk, reste, fio, saida;
+	
+endmodule 

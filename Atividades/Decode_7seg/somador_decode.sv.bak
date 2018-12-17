@@ -1,0 +1,10 @@
+module somador_decode (a, b, s);
+	input [3:0] a, b;
+	wire [3:0] lig;
+	output [6:0] s;
+	output co;
+	
+	somador_4 s0(a, b, 1'b0, lig),
+	
+	decode7seg d(lig, s)
+endmodule 

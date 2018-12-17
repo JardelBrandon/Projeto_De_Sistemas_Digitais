@@ -1,0 +1,22 @@
+module saturation(
+	input clk, reset;
+	input reg [7:0] entrada;
+	output reg [7:0] saida;
+);
+	reg [7:0] LIMIAR_SUP = 120;
+	reg [7:0] LIMIAR_INF = -120;
+	
+
+	always @ (posedge clk or posedge reset) 
+	begin
+		if (reset)
+			saida <= 0;
+		if (entrada > LIMIAR_SUP)
+			saida <= LIMIAR_SUP;
+		else 
+			if (entrada < LIMIAR_INF)
+				saida <= LIMIAR_INF;
+			else 
+				saida <= entrada;
+	end	
+endmodule 

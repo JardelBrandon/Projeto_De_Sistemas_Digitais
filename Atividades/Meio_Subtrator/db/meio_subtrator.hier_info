@@ -1,0 +1,9 @@
+|meio_subtrator
+a => d.IN0
+a => bout.IN0
+b => d.IN1
+b => bout.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim
+vdpcm_saturation_apb
+!s110 1545016808
+!i10b 1
+!s100 3216j3kb5^=jSIdS[JI[X1
+Iz@zH26ZAXmCWKHDoWIJLL2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1545016798
+8dpcm_saturation_apb.vo
+Fdpcm_saturation_apb.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1545016801.000000
+!s107 dpcm_saturation_apb.vo|
+!s90 -work|work|dpcm_saturation_apb.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vdpcm_saturation_apb_vlg_vec_tst
+!s110 1545016818
+!i10b 1
+!s100 J93]Q<2<R;CbVL>M<DLJI2
+I^0U@<0]eB?W>cS8E]Ba8b1
+R1
+R0
+w1545016794
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1545016810.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R3
+R4

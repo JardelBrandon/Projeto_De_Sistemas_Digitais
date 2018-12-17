@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/Decode7seg/simulation/qsim
+vdecode7seg
+!s110 1541351452
+!i10b 1
+!s100 WFQ9GZbZ6Hbo70`fA=U[<3
+ILHXNDi<2QQASf5VI;8]6S2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/jarde/Documents/GitHub/Projeto_De_Sistemas_Digitais/Atividades/Decode7seg/simulation/qsim
+w1541351435
+8decode7seg.vo
+Fdecode7seg.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1541351451.000000
+!s107 decode7seg.vo|
+!s90 -work|work|decode7seg.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vdecode7seg_vlg_vec_tst
+!s110 1541351453
+!i10b 1
+!s100 J88al65ied<gdBJ`Bmi^k0
+I7ZAUOGhoXi=j0EA9?VF=U1
+R0
+R1
+w1541351431
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1541351452.000000
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R3
+R4

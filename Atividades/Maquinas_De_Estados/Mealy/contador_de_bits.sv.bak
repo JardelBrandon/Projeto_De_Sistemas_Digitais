@@ -1,0 +1,59 @@
+module contador_de_bits
+(
+	input	clk, valid_in, reset,
+	input reg[7:0] data_in,
+	output read_in,
+	output reg [2:0] data_out,
+	output [1:0] estados
+);
+	
+	// Declare state register
+	typedef enum reg [1:0] {IDLE, DATA_IN, COUNT, S3} states;
+	// Declare states
+	states state;
+	assign estados = state;
+	reg [7:0] data;
+	reg [3:0] contador;
+	reg bit_para_contagem;
+	
+	// Output depends only on the state
+	always @ (state) begin
+		case (state)
+			IDLE:
+				read_in = 1'b1;
+			DATA_IN:
+				if (valid_in)
+					data = data_in;
+			COUNT:
+				valid_in = 1'b0;
+				read_in = 1'b0;
+				bit_para_contagem = data[7];
+				if (data[contador] == bit_para_contagem)
+					data_out = data_out + 1;
+			default:
+				data_out = 3'b000;
+		endcase
+	end
+	
+	// Determine the next state
+	always @ (posedge clk or posedge reset) begin
+		if (reset)
+			state <= IDLE;
+		else
+			case (state)
+				IDLE:
+					state <= DATA_IN;
+				DATA_IN:
+					if (valid_in)
+						state <= COUNT;
+					else
+						state <= DATA_IN;
+				COUNT:
+					if (contador < 3'b110)
+						state <= COUNT;
+					else
+						state <= IDLE;
+			endcase
+	end
+	
+endmodule

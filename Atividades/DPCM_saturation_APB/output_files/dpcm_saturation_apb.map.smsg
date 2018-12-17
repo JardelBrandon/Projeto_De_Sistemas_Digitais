@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at dpcm_saturation_apb.sv(27): always construct contains both blocking and non-blocking assignments File: E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/dpcm_saturation_apb.sv Line: 27
+Warning (10268): Verilog HDL information at saturation.sv(24): always construct contains both blocking and non-blocking assignments File: E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/saturation.sv Line: 24

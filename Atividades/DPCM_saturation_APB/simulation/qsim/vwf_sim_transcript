@@ -1,0 +1,150 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/intelfpga_lite/18.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off dpcm_saturation_apb -c dpcm_saturation_apb --vector_source="E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/Waveform.vwf" --testbench_file="E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/Waveform.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Mon Dec 17 00:19:49 2018
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off dpcm_saturation_apb -c dpcm_saturation_apb --vector_source=E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/Waveform.vwf --testbench_file=E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/Waveform.vwf.vt
+Info (119006): Selected device 5CGXFC7C7F23C8 for design "dpcm_saturation_apb"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+ontador[9]" in vector source file when writing test bench files
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/" dpcm_saturation_apb -c dpcm_saturation_apb
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Mon Dec 17 00:19:52 2018
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/ dpcm_saturation_apb -c dpcm_saturation_apb
+Info (119006): Selected device 5CGXFC7C7F23C8 for design "dpcm_saturation_apb"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file dpcm_saturation_apb.vo in folder "E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4741 megabytes
+    Info: Processing ended: Mon Dec 17 00:19:59 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:02
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/dpcm_saturation_apb.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do dpcm_saturation_apb.do
+
+Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+
+
+# 10.5b
+
+# do dpcm_saturation_apb.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:20:01 on Dec 17,2018
+# vlog -work work dpcm_saturation_apb.vo 
+
+# -- Compiling module dpcm_saturation_apb
+
+# 
+# Top level modules:
+# 	dpcm_saturation_apb
+
+# End time: 00:20:10 on Dec 17,2018, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:20:10 on Dec 17,2018
+# vlog -work work Waveform.vwf.vt 
+
+# -- Compiling module dpcm_saturation_apb_vlg_vec_tst
+
+# 
+# Top level modules:
+# 	dpcm_saturation_apb_vlg_vec_tst
+
+# End time: 00:20:18 on Dec 17,2018, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0
+
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.dpcm_saturation_apb_vlg_vec_tst 
+# Start time: 00:20:18 on Dec 17,2018
+# Loading work.dpcm_saturation_apb_vlg_vec_tst
+# Loading work.dpcm_saturation_apb
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+
+# after#25
+
+# ** Note: $finish    : Waveform.vwf.vt(64)
+#    Time: 1 us  Iteration: 0  Instance: /dpcm_saturation_apb_vlg_vec_tst
+# End time: 00:20:21 on Dec 17,2018, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/Waveform.vwf...
+
+Reading E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/dpcm_saturation_apb.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to E:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation_APB/simulation/qsim/dpcm_saturation_apb_20181217002021.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

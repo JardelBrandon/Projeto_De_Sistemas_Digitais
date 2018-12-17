@@ -1,0 +1,64 @@
+module dpcm_saturation_apb(
+	input PCLK, PRESETn, PWRITE,
+	input logic PSELx, PENABLE,
+	input reg [31:0] PADDR, 
+	input reg signed [31:0] PWDATA,
+	output logic PREADY, PSLVERR,
+	output reg signed [31:0] PRDATA,
+	output [1:0] estados
+);
+
+
+	typedef enum reg [1:0] {IDLE, SETUP, ACCESS} states;
+	states state;
+	assign estados = state;
+	
+	always @ (posedge clk or posedge reset) 
+	begin
+		if (reset)
+			state <= IDLE;
+		else
+			case (state)
+				IDLE:
+					if (PSELx)
+						state <= SETUP;
+					else 
+						state <= IDLE;	
+				SETUP:
+					state <= ACCESS;	
+				ACCESS:
+					if (PREADY & !PENABLE)
+						state <= IDLE;
+					else
+						state <= SETUP;
+	end
+
+
+	int fila_entradas[$];
+
+	reg signed [31:0] entrada_anterior;
+	
+	saturation s(PCLK, PRESETn, PWRITE, PSELx, PENABLE, PADDR,
+					PWDATA - entrada_anterior, PREADY, PSLVERR, PRDATA);
+	
+	always @ (posedge clk or posedge reset) 
+	if (reset)
+		begin
+			PSLVERR <= 0;
+			PREADY <= 1;
+			entrada_anterior <= 0;
+		end
+	else 
+		PREADY <= 0;
+		if (PWRITE)
+			begin
+				PSLVERR <= 1;
+				fila_entradas.push_back(PWDATA);
+				entrada_anterior = PWDATA;
+				fila_saidas.push_back(saida);
+				PSLVERR <= 0;
+			end
+		else;
+		PREADY <= 1;
+
+endmodule 

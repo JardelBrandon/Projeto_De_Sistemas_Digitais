@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, /media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/MeioCompleto/meio_subtrator.sv
+source_file = 1, /media/aluno/BRANDON-DRI/Nova pasta/Projeto Sistemas Digitais/MeioCompleto/db/meio_subtrator.cbx.xml
+design_name = meio_subtrator
+instance = comp, \d~output , d~output, meio_subtrator, 1
+instance = comp, \bout~output , bout~output, meio_subtrator, 1
+instance = comp, \a~input , a~input, meio_subtrator, 1
+instance = comp, \b~input , b~input, meio_subtrator, 1
+instance = comp, \d~0 , d~0, meio_subtrator, 1
+instance = comp, \bout~0 , bout~0, meio_subtrator, 1

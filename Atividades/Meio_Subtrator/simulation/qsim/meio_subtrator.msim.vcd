@@ -1,0 +1,84 @@
+$comment
+	File created using the following command:
+		vcd file meio_subtrator.msim.vcd -direction
+$end
+$date
+	Fri Sep 14 15:41:58 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module meio_subtrator_vlg_vec_tst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var wire 1 # bout $end
+$var wire 1 $ d $end
+
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + d~output_o $end
+$var wire 1 , bout~output_o $end
+$var wire 1 - a~input_o $end
+$var wire 1 . b~input_o $end
+$var wire 1 / d~0_combout $end
+$var wire 1 0 bout~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+0-
+0.
+0/
+00
+$end
+#80000
+1!
+1-
+1/
+1+
+1$
+#160000
+1"
+0!
+1.
+0-
+10
+1,
+1#
+#260000
+1!
+1-
+00
+0/
+0+
+0,
+0#
+0$
+#400000
+0"
+0!
+0.
+0-
+#1000000

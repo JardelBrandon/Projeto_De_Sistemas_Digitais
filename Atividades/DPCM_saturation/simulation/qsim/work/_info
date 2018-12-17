@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation/simulation/qsim
+vdpcm_saturation
+Z0 !s110 1544807048
+!i10b 1
+!s100 :L;@DLe_hiC?ZcCn`7]GK0
+IFHH:U2OTI2KMH8?[cGW<j2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/media/aluno/BRANDON/PenDriver/Github/Projeto_De_Sistemas_Digitais/Atividades/DPCM_saturation/simulation/qsim
+w1544807043
+8dpcm_saturation.vo
+Fdpcm_saturation.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1544807047.000000
+!s107 dpcm_saturation.vo|
+!s90 -work|work|dpcm_saturation.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vdpcm_saturation_vlg_vec_tst
+R0
+!i10b 1
+!s100 ]ZmTiXSENEG>f`2[3`o?h3
+IK<1=l2AN`[0:jon6Ce[4<3
+R1
+R2
+w1544807040
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1544807048.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
